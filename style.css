@@ -101,3 +101,64 @@ footer {
   padding: 20px;
   opacity: 0.7;
 }
+/* --- NOVAS ADIÇÕES DE DESIGN E COR --- */
+
+/* Estilo para destacar o botão ativo pelo JavaScript */
+button.ativo {
+  background: linear-gradient(135deg, #ff007f, #7928ca);
+  box-shadow: 0 0 15px rgba(255, 0, 127, 0.4);
+  font-weight: 600;
+}
+
+/* Cores temáticas sutis nas bordas de cada categoria */
+.card.mpb {
+  border-left: 4px solid #00f2fe;
+}
+
+.card.reggaeton {
+  border-left: 4px solid #f5576c;
+}
+
+/* Efeito Neon ao passar o mouse nos cards */
+.card.mpb:hover {
+  border-color: #00f2fe;
+  box-shadow: 0 10px 30px rgba(0, 242, 254, 0.2);
+}
+
+.card.reggaeton:hover {
+  border-color: #f5576c;
+  box-shadow: 0 10px 30px rgba(245, 87, 108, 0.2);
+}
+
+/* Estilização das tags (span) dentro dos cards */
+.card span {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin-top: 8px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Animação suave para quando os cards aparecerem/sumirem */
+.card {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Classe utilitária para esconder os cards filtrados */
+.escondido {
+  display: none !important;
+}
