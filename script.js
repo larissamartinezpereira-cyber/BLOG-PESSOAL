@@ -66,3 +66,29 @@ btnCurtir.addEventListener("click", () => {
         localStorage.removeItem("curtiu");
     }
 });
+const botoes = document.querySelectorAll(".btnCurtir");
+
+botoes.forEach(botao => {
+
+    const artista = botao.dataset.artista;
+
+    if(localStorage.getItem(artista) === "true"){
+        botao.classList.add("ativo");
+        botao.innerHTML = "❤️ Curtido";
+    }
+
+    botao.addEventListener("click", () => {
+
+        if(localStorage.getItem(artista) === "true"){
+            localStorage.removeItem(artista);
+            botao.classList.remove("ativo");
+            botao.innerHTML = "🤍 Curtir";
+        }else{
+            localStorage.setItem(artista,"true");
+            botao.classList.add("ativo");
+            botao.innerHTML = "❤️ Curtido";
+        }
+
+    });
+
+});
