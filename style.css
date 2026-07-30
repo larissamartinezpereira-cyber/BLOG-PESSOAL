@@ -180,3 +180,26 @@ button.ativo {
     color:#ccc;
     margin-bottom:25px;
 }
+.curtir{
+    margin:20px 0;
+}
+
+#btnCurtir{
+    background:#ff4d6d;
+    color:#fff;
+    border:none;
+    padding:12px 24px;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:16px;
+    transition:0.3s;
+}
+
+#btnCurtir:hover{
+    transform:scale(1.05);
+    background:#ff2d55;
+}
+
+#btnCurtir.curtido{
+    background:#28a745;
+}
